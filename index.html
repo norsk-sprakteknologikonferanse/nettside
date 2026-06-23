@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="nb">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Norsk språkteknologikonferanse</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            try {
+                var tema = localStorage.getItem("tema");
+                if (tema) document.documentElement.setAttribute("data-tema", tema);
+            } catch (e) { }
+        })();
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="tema-velger">
+            <button data-velg-tema="lys">lys</button>
+            <button data-velg-tema="mørk">mørk</button>
+        </div>
+        <h1>NorSK: Norsk SpråkteknologiKonferanse</h1>
+        <nav>
+            <ul>
+                <li><a class="aktiv" href="index.html">Forside</a></li>
+                <li><a href="utlysning.html">Utlysning</a></li>
+                <li><a href="viktige-datoer.html">Viktige datoer</a></li>
+                <li><a href="program.html">Program</a></li>
+                <li><a href="informasjon.html">Informasjon</a></li>
+                <li><a href="hvorfor.html">Hvorfor</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Nyeste oppdatering:</h1>
+<ul>
+<li>2026-06-23: Påmeldingen er åpen: <a href="https://nettskjema.no/a/636680">https://nettskjema.no/a/636680</a></li>
+<li>2026-06-23: Nettsiden er live!</li>
+</ul>
+<h1>Om konferansen</h1>
+<p>NorSK: Norsk SpråkteknologiKonferanse er en helt ny konferanse hvor språkteknologer snakker om faget sitt på norsk.
+Konferansen finansieres av <a href="https://www.hf.uio.no/senter-for-norsk-fagsprak-i-bruk/">NORBRUK – senter for norsk fagspråk i bruk</a></p>
+<h2>Hvem er konferansen for?</h2>
+<p>Forskere og utviklere som har språkteknologi som fagområde.<br />
+Hvis du jobber med å forske på eller utvikle språkteknologi (alle modaliter) er du midt i smørøyet. </p>
+<h2>Praktisk</h2>
+<ul>
+<li>Sted: Georg Sverdrups Hus, Universitet i Oslo</li>
+<li>Dato: 9.oktober 2026 </li>
+<li>Påmeldingsskjema: <a href="https://nettskjema.no/a/636680">https://nettskjema.no/a/636680</a></li>
+<li>Vi tar imot bidrag snart! Se fanen <a href="utlysning.html">utlysning</a></li>
+</ul>
+    </main>
+
+    <footer>
+        <button class="stjerne" data-velg-tema="nostalgisk" title="knapp som gjør noe visuelt morsomt">
+            <img src="stjerne.svg" alt="stjerne med teksten 'vi snakker norsk!'">
+        </button>
+        
+    </footer>
+
+    <script src="tema.js"></script>
+</body>
+
+</html>

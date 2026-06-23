@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="nb">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Viktige datoer – Norsk språkteknologikonferanse</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            try {
+                var tema = localStorage.getItem("tema");
+                if (tema) document.documentElement.setAttribute("data-tema", tema);
+            } catch (e) { }
+        })();
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="tema-velger">
+            <button data-velg-tema="lys">lys</button>
+            <button data-velg-tema="mørk">mørk</button>
+        </div>
+        <h1>NorSK: Norsk SpråkteknologiKonferanse</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="utlysning.html">Utlysning</a></li>
+                <li><a class="aktiv" href="viktige-datoer.html">Viktige datoer</a></li>
+                <li><a href="program.html">Program</a></li>
+                <li><a href="informasjon.html">Informasjon</a></li>
+                <li><a href="hvorfor.html">Hvorfor</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Viktige datoer</h1>
+<table>
+<thead>
+<tr>
+<th>Dato</th>
+<th>Hendelse</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>23.juni</td>
+<td>Nettsiden er live og påmelding åpner</td>
+</tr>
+<tr>
+<td>1.august</td>
+<td>Skjema for innsending av sammendrag åpner</td>
+</tr>
+<tr>
+<td>1.september</td>
+<td>Frist for innsending av sammendrag</td>
+</tr>
+<tr>
+<td>15.september</td>
+<td>Beskjed til forfattere</td>
+</tr>
+<tr>
+<td>17.september</td>
+<td>Frist for påmelding</td>
+</tr>
+<tr>
+<td>9.oktober</td>
+<td>Konferansedag</td>
+</tr>
+</tbody>
+</table>
+    </main>
+
+    <footer>
+        <button class="stjerne" data-velg-tema="nostalgisk" title="knapp som gjør noe visuelt morsomt">
+            <img src="stjerne.svg" alt="stjerne med teksten 'vi snakker norsk!'">
+        </button>
+        
+    </footer>
+
+    <script src="tema.js"></script>
+</body>
+
+</html>

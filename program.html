@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="nb">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Program – Norsk språkteknologikonferanse</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            try {
+                var tema = localStorage.getItem("tema");
+                if (tema) document.documentElement.setAttribute("data-tema", tema);
+            } catch (e) { }
+        })();
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="tema-velger">
+            <button data-velg-tema="lys">lys</button>
+            <button data-velg-tema="mørk">mørk</button>
+        </div>
+        <h1>NorSK: Norsk SpråkteknologiKonferanse</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="utlysning.html">Utlysning</a></li>
+                <li><a href="viktige-datoer.html">Viktige datoer</a></li>
+                <li><a class="aktiv" href="program.html">Program</a></li>
+                <li><a href="informasjon.html">Informasjon</a></li>
+                <li><a href="hvorfor.html">Hvorfor</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Program</h1>
+<p>Foreløpig tidsplan, mer detaljert innhold kommer.  </p>
+<table>
+<thead>
+<tr>
+<th>Tid</th>
+<th>Programpost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>08:30 - 09:00</td>
+<td>Registrering (kaffe)</td>
+</tr>
+<tr>
+<td>09:00 - 09:15</td>
+<td>Velkommen</td>
+</tr>
+<tr>
+<td>09:15 - 10:00</td>
+<td>Plenarforedrag av <a href="https://researchprofiles.ku.dk/en/persons/bolette-sandford-pedersen/">Bolette Sandford Pedersen</a></td>
+</tr>
+<tr>
+<td>10:00 - 11:00</td>
+<td>Presentasjoner</td>
+</tr>
+<tr>
+<td>11:00 - 11:15</td>
+<td>Pause (kaffe)</td>
+</tr>
+<tr>
+<td>11:15 - 12:15</td>
+<td>Presentasjoner</td>
+</tr>
+<tr>
+<td>12:15 - 13:15</td>
+<td>Lunsj</td>
+</tr>
+<tr>
+<td>13:15 - 14:15</td>
+<td>Plenarforedrag</td>
+</tr>
+<tr>
+<td>14:15 - 15:15</td>
+<td>Presentasjoner</td>
+</tr>
+<tr>
+<td>15:15 - 15:30</td>
+<td>Pause (kaffe)</td>
+</tr>
+<tr>
+<td>15:30 - 16:30</td>
+<td>Plakatsesjon</td>
+</tr>
+<tr>
+<td>16:30 - 17:00</td>
+<td>Panelsamtale</td>
+</tr>
+<tr>
+<td>17:00 - 17:30</td>
+<td>Avslutning</td>
+</tr>
+</tbody>
+</table>
+<!-- ## Romoversikt
+Linken, Stort møterom og Sverdrup spiseri er i [andre etasje i Georg Sverdrups Hus](https://use.mazemap.com/#v=1&config=uio&campusid=797&zlevel=-1&center=10.722055,59.939200&zoom=19.8)  
+Auditorium 1 og 2 er i [første etasje i Georg Sverdrups Hus](https://use.mazemap.com/#v=1&config=uio&campusid=797&zlevel=-2&center=10.722060,59.939247&zoom=19.8) -->
+
+<h2>Middag</h2>
+<p>Etter det offisielle programmet blir det middag på <strong>sted kommer</strong> fra 18:00. <br />
+Deltakerne dekker middagkostnaden selv.</p>
+    </main>
+
+    <footer>
+        <button class="stjerne" data-velg-tema="nostalgisk" title="knapp som gjør noe visuelt morsomt">
+            <img src="stjerne.svg" alt="stjerne med teksten 'vi snakker norsk!'">
+        </button>
+        
+    </footer>
+
+    <script src="tema.js"></script>
+</body>
+
+</html>

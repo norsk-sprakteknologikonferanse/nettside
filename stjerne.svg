@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <polygon points="100,10 119,54 164,36 146,81 190,100 146,119 164,164 119,146 100,190 81,146 36,164 54,119 10,100 54,81 36,36 81,54"
+           fill="#ffd400" stroke="#000" stroke-width="3" stroke-linejoin="round"
+           transform="rotate(12 100 100)"/>
+  <text text-anchor="middle" font-family="Arial, Helvetica, sans-serif"
+        font-weight="bold" font-size="18" fill="#000">
+    <tspan x="100" y="96">vi snakker</tspan>
+    <tspan x="100" y="118">norsk!</tspan>
+  </text>
+</svg>
