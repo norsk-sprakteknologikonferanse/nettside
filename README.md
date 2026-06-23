@@ -1,3 +1,3 @@
 # Nettside
 
-Dette repoet inneholder filene som vises på [https://github.com/norsk-sprakteknologikonferanse/nettside](https://github.com/norsk-sprakteknologikonferanse/nettside)
+Dette repoet inneholder filene som vises på [norsk-sprakteknologikonferanse.github.io/nettside/](https://norsk-sprakteknologikonferanse.github.io/nettside/)
