@@ -369,7 +369,14 @@ html[data-tema="nostalgisk"] main {
     background: #000066;
     border: 4px ridge #ff00ff;
     padding: 1em 1.5em;
-    text-align: left;
+    text-align: center;
+}
+
+/* kulepunkta må stå inni lista for å bli sentrert sammen med teksten */
+html[data-tema="nostalgisk"] main ul,
+html[data-tema="nostalgisk"] main ol {
+    list-style-position: inside;
+    padding-left: 0;
 }
 
 html[data-tema="nostalgisk"] a {
@@ -413,6 +420,7 @@ html[data-tema="nostalgisk"] td {
     padding: 0.3em 1em;
     border: 2px groove #6666cc;
     color: #ffffff;
+    text-align: left;
 }
 
 html[data-tema="nostalgisk"] th {
