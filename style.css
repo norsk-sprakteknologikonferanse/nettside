@@ -31,8 +31,10 @@ body {
 }
 
 header {
+    /* skriftstørrelsene i headeren; logohøyden regnes ut fra disse to */
     --h1-storrelse: 2em;
     --fane-storrelse: 1.2em;
+    /* hvor mye høyere logoen er enn tekstblokka ved siden av */
     --logo-ekstra: 1.9em;
     position: relative;
     border-bottom: 1px solid var(--kant);
@@ -96,20 +98,27 @@ header {
     display: flex;
     align-items: center;
     gap: 0.8em;
+    /* litt luft over overskrifta, så den ikke klistrer seg til toppen av siden */
     padding-top: 0.5em;
 }
 
+/* logoen er høyere enn tekstblokka; med bunnjustering legger overskrift og
+   faner seg nederst mot logoen, så all luften havner over overskrifta */
 .header-tekst {
     min-width: 0;
     align-self: flex-end;
 }
 
+/* logoen følger høyden på h1-en + navigasjonsfanene, pluss --logo-ekstra:
+   h1 (line-height 1.1) + h1s margin-bottom (0.1 av h1-størrelsen) + fanene (line-height 1.2) */
 .header-logo {
     flex: 0 0 auto;
     height: calc(var(--h1-storrelse) * 1.1 + var(--h1-storrelse) * 0.1 + var(--fane-storrelse) * 1.2 + var(--logo-ekstra));
     width: auto;
 }
 
+/* logoen finnes i to varianter, én for lys og én for mørk bakgrunn.
+   nostalgisk har også mørk header, og bruker derfor den mørke logoen */
 .header-logo-mørk {
     display: none;
 }
@@ -136,6 +145,7 @@ header h1 a {
     text-decoration: none;
 }
 
+/* fanene er litt større enn brødteksten; nostalgisk har sin egen knappestil */
 html:not([data-tema="nostalgisk"]) nav {
     font-size: var(--fane-storrelse);
     line-height: 1.2;
@@ -175,6 +185,7 @@ main h1 {
     margin: 1.5em 0;
 }
 
+/* logoen er svart; inverter til hvit i mørke tema */
 html[data-tema="mørk"] .logo,
 html[data-tema="nostalgisk"] .logo {
     filter: invert(1);
@@ -258,6 +269,7 @@ html[data-tema="nostalgisk"] header {
     margin-bottom: 1.5em;
 }
 
+/* litt luft mellom knappene og den ridge-kanten headeren har i dette temaet */
 html[data-tema="nostalgisk"] .tema-velger {
     top: 0.5em;
     right: 0.5em;
@@ -288,9 +300,15 @@ html[data-tema="nostalgisk"] header h1 a {
     color: #ff00ff;
 }
 
+/* i nostalgisk står logoen ved siden av overskrifta alene, og fanene
+   legger seg på egen linje under (h1 og nav blir egne flex-elementer) */
 html[data-tema="nostalgisk"] .header-topp {
     flex-wrap: wrap;
+    /* skyver logo og overskrift ned, slik at de ikke ligger klint opp
+       i tema-knappene som svever øverst til høyre */
     padding-top: 1.2em;
+    /* body-en i dette temaet er sentrert; her vil vi ha overskrift og
+       faner venstrestilt inntil logoen */
     text-align: left;
 }
 
@@ -298,6 +316,11 @@ html[data-tema="nostalgisk"] .header-tekst {
     display: contents;
 }
 
+/* flex-basis 0 gjør at overskrifta ikke regnes som "for bred" og dyttes
+   ned på egen linje; i stedet fyller den plassen ved siden av logoen og
+   lar teksten brytes når vinduet blir smalt.
+   bunnjustert som i lys/mørk, så overskuddshøyden fra logoen havner over
+   teksten og ikke mellom teksten og fanene */
 html[data-tema="nostalgisk"] .header-topp h1 {
     flex: 1 1 0;
     min-width: 0;
@@ -308,10 +331,15 @@ html[data-tema="nostalgisk"] .header-topp nav {
     flex-basis: 100%;
 }
 
+/* litt større enn selve teksten: overskrifta (2em med line-height 1.45)
+   pluss 2em ekstra, tilsvarende --logo-ekstra i de andre temaene */
 html[data-tema="nostalgisk"] .header-logo {
     height: calc(2em * 1.45 + 2em);
 }
 
+/* li-ene er inline i bunnstilen, og da gjør ikke margen over/under noe.
+   inline-block gjør at margen teller, så knapperadene får luft mellom seg
+   når de brytes over flere linjer */
 html[data-tema="nostalgisk"] nav li {
     display: inline-block;
     margin: 0.2em;
@@ -341,13 +369,7 @@ html[data-tema="nostalgisk"] main {
     background: #000066;
     border: 4px ridge #ff00ff;
     padding: 1em 1.5em;
-    text-align: center;
-}
-
-html[data-tema="nostalgisk"] main ul,
-html[data-tema="nostalgisk"] main ol {
-    list-style-position: inside;
-    padding-left: 0;
+    text-align: left;
 }
 
 html[data-tema="nostalgisk"] a {
@@ -391,7 +413,6 @@ html[data-tema="nostalgisk"] td {
     padding: 0.3em 1em;
     border: 2px groove #6666cc;
     color: #ffffff;
-    text-align: left;
 }
 
 html[data-tema="nostalgisk"] th {
