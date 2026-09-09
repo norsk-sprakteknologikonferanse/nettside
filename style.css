@@ -6,6 +6,7 @@ html[data-tema="lys"] {
     --lenke-besokt: #551a8b;
     --kant: #999;
     --dempet: #555;
+    --rad-pause: #f2f2f2;
 }
 
 html[data-tema="mørk"] {
@@ -15,6 +16,7 @@ html[data-tema="mørk"] {
     --lenke-besokt: #b8a0ff;
     --kant: #3a3a4a;
     --dempet: #9a9aa8;
+    --rad-pause: #1e1e2a;
 }
 
 body {
@@ -201,8 +203,12 @@ table {
 th,
 td {
     text-align: left;
-    padding: 0.2em 1em 0.2em 0;
+    padding: 0.2em 1em 0.2em 0.5em;
     vertical-align: top;
+}
+
+tr.pause {
+    background: var(--rad-pause);
 }
 
 th {
@@ -397,6 +403,10 @@ html[data-tema="nostalgisk"] td {
 html[data-tema="nostalgisk"] th {
     background: #330066;
     color: #ffff00;
+}
+
+html[data-tema="nostalgisk"] tr.pause {
+    background: #1a1a4d;
 }
 
 html[data-tema="nostalgisk"] footer {
