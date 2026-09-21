@@ -211,6 +211,20 @@ tr.pause {
     background: var(--rad-pause);
 }
 
+table.sesjon tbody tr:nth-child(even) {
+    background: var(--rad-pause);
+}
+
+/* Sesjonstabellene får like kolonnebredder, så kolonnene står rett under hverandre */
+table.sesjon {
+    width: 100%;
+    table-layout: fixed;
+}
+
+table.sesjon th:first-child {
+    width: 14%;
+}
+
 th {
     font-weight: bold;
     border-bottom: 1px solid var(--kant);
@@ -405,7 +419,8 @@ html[data-tema="nostalgisk"] th {
     color: #ffff00;
 }
 
-html[data-tema="nostalgisk"] tr.pause {
+html[data-tema="nostalgisk"] tr.pause,
+html[data-tema="nostalgisk"] table.sesjon tbody tr:nth-child(even) {
     background: #1a1a4d;
 }
 
