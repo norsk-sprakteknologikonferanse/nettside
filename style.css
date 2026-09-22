@@ -225,6 +225,19 @@ table.sesjon th:first-child {
     width: 14%;
 }
 
+/* Forfatterne står i kursiv etter tittelen i markdown, og vises på egen linje under */
+table.sesjon td em {
+    display: block;
+    margin-top: 0.15em;
+    font-size: 0.9em;
+    color: var(--dempet);
+}
+
+table.sesjon td {
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+}
+
 th {
     font-weight: bold;
     border-bottom: 1px solid var(--kant);
@@ -417,6 +430,10 @@ html[data-tema="nostalgisk"] td {
 html[data-tema="nostalgisk"] th {
     background: #330066;
     color: #ffff00;
+}
+
+html[data-tema="nostalgisk"] table.sesjon td em {
+    color: #aaccff;
 }
 
 html[data-tema="nostalgisk"] tr.pause,
